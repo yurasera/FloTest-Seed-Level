@@ -81,7 +81,8 @@ flotest/
 │   └── result.html
 │
 └── assets/
-│   ├── css/style.css
+│   ├── css/
+│       └── style.css
     └── images/
 ```
 
@@ -155,11 +156,58 @@ Project dianggap selesai jika:
 * Tidak menggunakan inline CSS
 * Struktur folder project rapi
 * Seluruh halaman menggunakan dummy data yang konsisten
+* Tidak ada halaman kosong
+
+---
+
+## 10. Navigasi
+
+- Login → Dashboard Admin
+- Login → Dashboard Mentor
+- Login → Dashboard Menti
+
+- Dashboard Mentor → Daftar Tes Mentor
+- Dashboard Mentor → Form Buat Tes
+
+- Dashboard Menti → Kerjakan Tes
+- Dashboard Menti → Hasil Tes
+
+- Setiap halaman memiliki tombol kembali ke Dashboard masing-masing
+
+---
+
+## 11. HTML Element yang Wajib Digunakan
+
+- header
+- nav
+- main
+- section
+- article
+- footer
+- form
+- input
+- textarea
+- select
+- button
+- table
+
+---
+
+## 12. Naming Convention
+
+- Gunakan huruf kecil
+- Gunakan tanda hubung (-) untuk nama file
+
+Contoh:
+
+dashboard.html
+create-test.html
+take-test.html
 
 ---
 
 
-## 10. Halaman yang Harus Dibuat
+## 13. Halaman yang Harus Dibuat
 
 ### 1. Login Page
 
