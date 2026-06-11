@@ -254,6 +254,17 @@ Mentee berhasil membuat:
 * Struktur folder yang rapi
 * Dummy data yang konsisten
 
+### Daftar Halaman
+
+1. Login
+2. Dashboard Admin
+3. Dashboard Mentor
+4. Daftar Tes Mentor
+5. Form Buat Tes
+6. Dashboard Menti
+7. Kerjakan Tes
+8. Hasil Tes
+
 ---
 
 ## 9. Acceptance Criteria
