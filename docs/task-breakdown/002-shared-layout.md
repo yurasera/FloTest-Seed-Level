@@ -8,28 +8,28 @@ Membangun shared layout yang digunakan di semua halaman aplikasi.
 
 ### Tasks
 
-* [ ] Tambahkan elemen `header`
-* [ ] Tambahkan elemen `nav`
-* [ ] Tambahkan elemen `main`
-* [ ] Tambahkan elemen `section`
-* [ ] Tambahkan elemen `footer`
+* [x] Tambahkan elemen `header`
+* [x] Tambahkan elemen `nav`
+* [x] Tambahkan elemen `main`
+* [x] Tambahkan elemen `section`
+* [x] Tambahkan elemen `footer`
 
 ## Feature: Global Styling
 
 ### Tasks
 
-* [ ] Buat style typography
-* [ ] Buat style button
-* [ ] Buat style form
-* [ ] Buat style table
-* [ ] Buat style card
-* [ ] Buat style navigation
-* [ ] Buat style container layout
+* [x] Buat style typography
+* [x] Buat style button
+* [x] Buat style form
+* [x] Buat style table
+* [x] Buat style card
+* [x] Buat style navigation
+* [x] Buat style container layout
 
 ## Feature: Responsive Design
 
 ### Tasks
 
-* [ ] Implementasi responsive untuk desktop
-* [ ] Implementasi responsive untuk tablet
-* [ ] Implementasi responsive untuk mobile
+* [x] Implementasi responsive untuk desktop
+* [x] Implementasi responsive untuk tablet
+* [x] Implementasi responsive untuk mobile

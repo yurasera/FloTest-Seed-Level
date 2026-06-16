@@ -1,187 +1,636 @@
-/* Reset */
+/* 
+  =========================================
+  FLOTEST STYLE SYSTEM (EDUCATIONAL VERSION)
+  =========================================
+  File CSS ini didesain untuk mempercantik aplikasi FloTest sekaligus sebagai bahan belajar.
+  Komentar di bawah ditulis secara detail dalam Bahasa Indonesia untuk membantu 
+  programmer tingkat pemula (seed level) memahami setiap properti dan teknik CSS yang digunakan.
+*/
+
+/* 
+  1. @import - Mengambil font eksternal 'Plus Jakarta Sans' dari Google Fonts 
+  agar tipografi aplikasi terlihat modern dan premium dibanding font bawaan browser.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* 
+  2. :root (VARIABEL CSS)
+  Di sini kita mendefinisikan "variabel" untuk menyimpan warna, bayangan, dan efek.
+  Dengan variabel, jika kita ingin mengganti satu warna utama, kita hanya perlu mengubah nilai di sini sekali,
+  dan seluruh elemen yang menggunakan variabel tersebut akan otomatis ikut berubah.
+  Gunakan sintaks `var(--nama-variabel)` untuk menggunakannya di kode CSS Anda.
+*/
+:root {
+  /* --- Tema Terang (Default / Light Mode) --- */
+  --bg-primary: #f8fafc;        /* Warna latar belakang utama halaman */
+  --bg-secondary: #ffffff;      /* Warna latar belakang komponen (seperti kartu) */
+  --bg-tertiary: #f1f5f9;       /* Warna latar belakang elemen pendukung */
+  --text-primary: #0f172a;      /* Warna teks utama (hampir hitam untuk keterbacaan tinggi) */
+  --text-secondary: #475569;    /* Warna teks sekunder (abu-abu gelap untuk deskripsi/paragraf) */
+  --text-muted: #94a3b8;        /* Warna teks pudar (untuk placeholder/footer) */
+  
+  --primary-color: #6366f1;     /* Warna brand utama (Indigo) */
+  --primary-color-hover: #4f46e5; /* Warna brand utama saat kursor diarahkan (hover) */
+  --primary-gradient: linear-gradient(135deg, #6366f1, #8b5cf6); /* Gradasi warna dari Indigo ke Ungu */
+  --primary-glow: rgba(99, 102, 241, 0.15); /* Pendaran warna brand (menggunakan transparansi alpha) */
+  
+  --accent-color: #0ea5e9;      /* Warna aksen pendukung (Biru langit) */
+  --accent-gradient: linear-gradient(135deg, #0ea5e9, #2563eb); /* Gradasi warna aksen */
+  
+  --border-color: #e2e8f0;      /* Warna garis tepi elemen */
+  --border-focus: #6366f1;      /* Warna garis tepi saat input aktif/fokus */
+  
+  /* Bayangan halus (box-shadow) untuk memberikan kedalaman (efek 3D) pada kartu */
+  --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.03), 0 8px 15px -6px rgba(0, 0, 0, 0.03), 0 0 1px 1px rgba(0, 0, 0, 0.01);
+  --card-hover-shadow: 0 20px 40px -5px rgba(99, 102, 241, 0.08), 0 12px 20px -8px rgba(99, 102, 241, 0.08);
+  
+  --success-color: #10b981;     /* Hijau untuk indikator sukses / tombol simpan */
+  --success-glow: rgba(16, 185, 129, 0.2);
+  --danger-color: #ef4444;      /* Merah untuk indikator bahaya / error / hapus */
+  --danger-glow: rgba(239, 68, 68, 0.2);
+  
+  /* Efek Glassmorphism (efek kaca transparan) */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-blur: blur(12px);
+}
+
+/* 
+  3. @media (prefers-color-scheme: dark) (TEMA GELAP OTOMATIS)
+  Kode di dalam blok ini akan otomatis aktif jika sistem operasi komputer/HP pengguna 
+  sedang menggunakan mode gelap (Dark Mode). Kita tinggal menimpa nilai variabel di atas 
+  dengan warna-warna versi gelap.
+*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #090d16;        /* Latar belakang halaman yang sangat gelap */
+    --bg-secondary: #111827;      /* Latar belakang kartu yang gelap */
+    --bg-tertiary: #1f2937;       /* Latar belakang elemen dalam kartu */
+    --text-primary: #f8fafc;      /* Teks putih terang agar mudah dibaca */
+    --text-secondary: #cbd5e1;    /* Teks abu-abu terang */
+    --text-muted: #64748b;        /* Teks abu-abu pudar */
+    
+    --primary-color: #8b5cf6;     /* Warna brand utama versi gelap */
+    --primary-color-hover: #a855f7;
+    --primary-gradient: linear-gradient(135deg, #6366f1, #a855f7);
+    --primary-glow: rgba(139, 92, 246, 0.3);
+    
+    --accent-color: #14b8a6;      /* Aksen warna teal/toska di mode gelap */
+    --accent-gradient: linear-gradient(135deg, #14b8a6, #06b6d4);
+    
+    --border-color: rgba(255, 255, 255, 0.08); /* Garis tepi tipis semi-transparan */
+    --border-focus: #a855f7;
+    
+    --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+    --card-hover-shadow: 0 25px 50px rgba(99, 102, 241, 0.15), 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    
+    --success-color: #34d399;
+    --success-glow: rgba(52, 211, 153, 0.3);
+    --danger-color: #f87171;
+    --danger-glow: rgba(248, 113, 113, 0.3);
+    
+    --glass-bg: rgba(17, 24, 39, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-blur: blur(16px);
+  }
+}
+
+/* 
+  4. RESET & GLOBAL STYLES
+  Browser bawaan biasanya memiliki margin/padding bawaan yang berbeda-beda.
+  Kita meresetnya agar tampilan aplikasi konsisten di semua browser (Chrome, Safari, Firefox).
+*/
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Lebar elemen sudah termasuk padding dan border agar kalkulasi layout mudah */
+  margin: 0;              /* Hapus margin default */
+  padding: 0;             /* Hapus padding default */
 }
 
 html {
-  line-height: 1.5;
+  line-height: 1.6;        /* Tinggi baris teks agar nyaman dibaca */
+  font-size: 16px;         /* Ukuran dasar teks */
+  scroll-behavior: smooth; /* Efek transisi gulir (scroll) yang mulus */
+  height: 100%;            /* Paksa HTML memenuhi layar penuh */
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #1f2937;
-  background: #f3f4f6;
+  /* Menggunakan font utama Plus Jakarta Sans, dengan fallback font sistem jika gagal dimuat */
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  
+  /* 
+    radial-gradient: Membuat pola bulatan cahaya pendaran di latar belakang 
+    untuk memberikan estetika yang premium dan modern pada aplikasi.
+  */
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 40%);
+  background-attachment: fixed; /* Latar belakang tidak ikut bergulir saat halaman di-scroll */
+  min-height: 100%;
+  
+  /* 
+    Flexbox Layout pada body:
+    Membantu menyusun layout halaman secara vertikal (column),
+    sehingga footer selalu berada di paling bawah layar meskipun konten halaman sedang sedikit.
+  */
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased; /* Menghaluskan rendering font pada macOS/Safari */
+  -moz-osx-font-smoothing: grayscale;  /* Menghaluskan rendering font pada Firefox */
+  
+  /* Efek transisi ketika terjadi pergantian warna tema (Light/Dark Mode) */
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Global */
+/* --- Elemen Global --- */
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit;         /* Warna link mengikuti teks induknya */
+  text-decoration: none;  /* Hapus garis bawah bawaan pada link */
+  /* Efek transisi halus saat link di-hover */
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-h1,
-h2,
-h3,
-h4,
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-primary);
+  letter-spacing: -0.025em; /* Kerapatan antar huruf dirapatkan sedikit agar tampak profesional */
+}
+
 p {
-  margin-top: 0;
+  color: var(--text-secondary);
 }
 
+/* 
+  Container: pembatas lebar konten utama di tengah layar agar tidak terlalu lebar di layar PC monitor besar. 
+  min(1200px, ...) menjamin lebar maksimal adalah 1200px, namun akan mengecil jika layar lebih kecil dari 1200px.
+*/
 .container {
-  width: min(1120px, calc(100% - 2rem));
-  margin: 0 auto;
+  width: min(1200px, calc(100% - 2.5rem));
+  margin: 0 auto; /* Menengahkan elemen secara horizontal */
 }
 
-/* Layout */
-.site-header,
-.site-footer {
-  background: #111827;
-  color: #f9fafb;
-}
+/* --- Layout --- */
 
+/* 
+  site-header: Header navigasi di bagian paling atas halaman.
+  position: sticky dan top: 0 membuat header melayang tetap di atas layar saat halaman di-scroll.
+*/
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--glass-bg); /* Latar belakang transparan tipis */
+  backdrop-filter: var(--glass-blur); /* Efek blur kaca di belakang header */
+  -webkit-backdrop-filter: var(--glass-blur); /* Kompatibilitas webkit (Safari) */
+  border-bottom: 1px solid var(--glass-border);
   padding: 1rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
 }
 
 .header-inner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  align-items: center; /* Menengahkan logo & navigasi secara vertikal */
+  justify-content: space-between; /* Logo di kiri, Navigasi di kanan */
+  gap: 2rem;
+}
+
+.site-header h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  /* Teknik CSS untuk membuat warna teks gradasi (gradient text) */
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: -0.03em;
+  position: relative;
+  display: inline-block;
 }
 
 .site-header nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 0.5rem; /* Jarak antar tombol menu navigasi */
+}
+
+.site-header nav a {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+/* Efek saat kursor menunjuk (hover) menu navigasi */
+.site-header nav a:hover {
+  color: var(--primary-color);
+  background: var(--bg-tertiary);
+}
+
+/* Desain menu navigasi yang sedang aktif (halaman saat ini) */
+.site-header nav a.active {
+  color: var(--text-primary);
+  background: var(--primary-glow);
+}
+
+/* Membuat garis kecil penanda aktif di bagian bawah menu navigasi menggunakan pseudo-element ::after */
+.site-header nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0.125rem;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: var(--primary-gradient);
+  border-radius: 9999px;
 }
 
 main {
-  padding: 2rem 0 3rem;
+  flex-grow: 1; /* Konten utama akan mengambil semua sisa ruang vertikal yang ada */
+  padding: 2.5rem 0 4rem;
+  /* Menjalankan animasi fadeIn (pudar masuk) saat halaman pertama kali dimuat */
+  animation: fadeIn 0.4s ease-out;
 }
 
 .site-footer {
-  padding: 1rem 0;
-  margin-top: 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-top: 1px solid var(--glass-border);
+  padding: 1.5rem 0;
   text-align: center;
+  margin-top: auto; /* Memastikan footer didorong ke dasar halaman */
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.02);
 }
 
-/* Components */
+.site-footer p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* --- Components (Komponen) --- */
+
+/* 
+  Card (.card)
+  Kotak pembungkus konten utama. Dibuat dengan sudut membulat (border-radius) 
+  dan efek transisi 3D yang sangat mulus saat diarahkan kursor.
+*/
 .card {
-  background: #ffffff;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.25rem; /* Sudut membulat modern */
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  /* 
+    transition dengan cubic-bezier memberikan efek pantulan elastis (springy effect) 
+    saat kursor diarahkan, membuat interface terasa hidup dan interaktif.
+  */
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
 }
 
+/* Efek saat kartu di-hover (diarahkan kursor): kartu naik sedikit ke atas dan bayangan membesar */
+.card:hover {
+  transform: translateY(-4px); /* Menggeser kartu ke atas sejauh 4 piksel */
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--border-focus);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+/* Garis dekorasi kecil di bawah judul kartu menggunakan pseudo-element ::after */
+.card h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem; /* Panjang garis */
+  height: 3px;  /* Tebal garis */
+  background: var(--primary-gradient);
+  border-radius: 2px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* inner-card: Kartu di dalam kartu (biasanya untuk list ringkasan kecil) */
 .inner-card {
   margin-top: 1.5rem;
-  background: #f9fafb;
+  background: var(--bg-tertiary);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
 }
 
+/* 
+  Button / Tombol (.btn)
+  Didesain dengan struktur flexbox agar ikon dan teks di dalam tombol sejajar rapi di tengah.
+*/
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.75rem;
-  padding: 0.75rem 1rem;
-  background: #ffffff;
-  color: #111827;
+  gap: 0.5rem; /* Jarak antara teks dan ikon di dalam tombol */
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem; /* Sudut tombol membulat manis */
+  padding: 0.75rem 1.25rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
-  font: inherit;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btn:hover {
+  background-color: var(--bg-tertiary);
+  border-color: var(--text-muted);
+  transform: translateY(-1px); /* Tombol naik sedikit saat kursor mengarah */
+}
+
+/* Efek saat tombol diklik (active): tombol tertekan ke bawah */
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* btn-primary: Tombol aksi utama dengan warna gradasi mencolok */
 .btn-primary {
-  background: #111827;
-  border-color: #111827;
+  background: var(--primary-gradient);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.btn-primary:hover {
+  background: var(--primary-gradient);
+  filter: brightness(1.1); /* Membuat gradasi sedikit lebih terang saat di-hover */
+  box-shadow: 0 6px 20px var(--primary-glow);
+  transform: translateY(-2px);
   color: #ffffff;
 }
 
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* --- Form (Formulir) --- */
+form {
+  margin-top: 1.5rem;
+}
+
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column; /* Label berada di atas field input */
 }
 
 label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-primary);
 }
 
+/* 
+  Input, Select (Dropdown), dan Textarea (Input teks panjang)
+  Kita menyamakan ukuran sudut dan padding agar terlihat seragam dan konsisten.
+*/
 input,
 select,
 textarea {
   width: 100%;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
   border-radius: 0.75rem;
-  padding: 0.75rem 1rem;
-  font: inherit;
-  background: #ffffff;
+  padding: 0.8rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02) inset; /* Bayangan halus ke dalam input (inset) */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efek saat user sedang mengetik atau memilih kolom formulir (focus) */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none; /* Hapus garis outline bawaan browser yang kurang rapi */
+  border-color: var(--border-focus);
+  /* Efek pendaran warna ungu transparan di sekeliling input */
+  box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted); /* Warna teks petunjuk (placeholder) yang samar */
+}
+
+/* 
+  Select (Dropdown) Custom Arrow:
+  Kita menyembunyikan panah bawaan browser yang kaku dan menggantinya 
+  dengan panah SVG kustom yang minimalis dan cantik.
+*/
+select {
+  appearance: none; /* Menyembunyikan panah bawaan browser */
+  -webkit-appearance: none;
+  /* Memasukkan gambar panah SVG langsung via kode data-uri */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center; /* Letak panah di sebelah kanan */
+  background-size: 1.25rem;
+  padding-right: 2.5rem; /* Tambah padding kanan agar teks tidak bertabrakan dengan panah */
 }
 
 textarea {
-  resize: vertical;
+  resize: vertical; /* User hanya diperbolehkan menarik tinggi textarea secara vertikal */
   min-height: 120px;
-}
-
-form {
-  margin-top: 1rem;
 }
 
 .button-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+/* --- Table (Tabel Data) --- */
+
+/* 
+  table-wrapper: pembungkus tabel.
+  Sangat penting! Properti overflow-x: auto membuat tabel dapat digeser ke samping (scroll horizontal) 
+  apabila data kolom terlalu lebar, sehingga tidak merusak layout halaman.
+*/
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.875rem;
+  border: 1px solid var(--border-color);
+  margin-top: 1.5rem;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  overflow: hidden;
-  background: #ffffff;
-  border-radius: 0.75rem;
+  border-collapse: separate; /* Memungkinkan border-radius pada wrapper tabel bekerja */
+  border-spacing: 0;
+  background: var(--bg-secondary);
+  text-align: left;
 }
 
 th,
 td {
-  padding: 0.875rem 1rem;
-  text-align: left;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 th {
-  background: #f9fafb;
+  background: var(--bg-tertiary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase; /* Judul kolom tabel dipaksa huruf kapital semua */
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
 }
 
-/* Utilities */
+tr:last-child td {
+  border-bottom: none; /* Baris paling bawah tidak memiliki garis pembatas bawah agar rapi */
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+/* Baris tabel akan sedikit berubah warna saat disorot kursor (hover effect) */
+tbody tr:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* --- Utilities (Elemen Bantu) --- */
 .auth-card {
-  max-width: 560px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 2rem auto;
 }
 
-@media (max-width: 640px) {
+.auth-card h2 {
+  text-align: center;
+}
+
+.auth-card h2::after {
+  left: 50%;
+  transform: translateX(-50%); /* Menengahkan garis hiasan di bawah judul Login */
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 
+  Badges (.badge)
+  Label kecil warna-warni untuk menandai status (misal: Published, Draft, Archived) 
+  atau peran (Admin, Mentor, Menti).
+*/
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px; /* Membuat bentuk pil bulat sempurna */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Badge warna hijau (sukses / admin / published) */
+.badge-published, .badge-admin {
+  background-color: var(--success-glow);
+  color: var(--success-color);
+}
+
+/* Badge warna ungu/indigo (proses / mentor / draft) */
+.badge-draft, .badge-mentor {
+  background-color: var(--primary-glow);
+  color: var(--primary-color);
+}
+
+/* Badge warna merah (batal / menti / archived) */
+.badge-archived, .badge-menti {
+  background-color: var(--danger-glow);
+  color: var(--danger-color);
+}
+
+/* 
+  5. KEYFRAMES ANIMATION (ANIMASI)
+  Mendefinisikan efek pudar dan geser ke atas (fadeIn) saat halaman pertama kali terbuka.
+*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;             /* Mulai dari pudar/tidak terlihat */
+    transform: translateY(8px); /* Mulai dari posisi 8 piksel di bawah posisi akhir */
+  }
+  to {
+    opacity: 1;             /* Terang sepenuhnya */
+    transform: translateY(0);   /* Kembali ke posisi normal */
+  }
+}
+
+/* --- 6. RESPONSIVE DESIGN (DESAIN RESPONSIF) --- */
+
+/* Breakpoint 1: Layar Sedang / Laptop Kecil (Maksimal Lebar 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    width: min(900px, calc(100% - 2.5rem));
+  }
+}
+
+/* Breakpoint 2: Layar HP & Tablet (Maksimal Lebar 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: calc(100% - 2rem);
+  }
+
+  /* Susun header menjadi baris ke bawah (vertikal) di layar kecil agar tidak sesak */
   .header-inner {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 1rem;
+    text-align: center;
   }
 
-  .button-group {
-    flex-direction: column;
-  }
-
-  .btn {
+  .site-header nav {
+    justify-content: center;
     width: 100%;
   }
 
+  main {
+    padding: 1.5rem 0 3rem;
+  }
+
+  /* 
+    RESPONSIVE TABLE TRICK (Trik Tabel Responsif Tanpa Scroll):
+    Di layar handphone yang sempit, kita mengubah tampilan tabel data konvensional 
+    menjadi susunan baris berupa "kartu vertikal" yang sangat mudah dibaca.
+  */
+  .table-wrapper {
+    border: none; /* Hapus bingkai tabel utama */
+  }
+
+  /* Paksa semua elemen tabel agar berperilaku seperti elemen block (turun ke bawah) */
   table,
   thead,
   tbody,
@@ -191,17 +640,70 @@ th {
     display: block;
   }
 
+  /* Sembunyikan kepala tabel (thead) karena tidak lagi cocok dengan susunan vertikal */
   thead {
     display: none;
   }
 
+  /* Setiap baris data (tr) diubah menjadi satu buah kotak/kartu tersendiri */
   tr {
-    border-bottom: 1px solid #e5e7eb;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    box-shadow: var(--card-shadow);
   }
 
+  /* Setiap kolom (td) diselaraskan ke kiri dan kanan */
   td {
-    border-bottom: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border-color); /* Garis putus-putus antar kolom data */
+    padding: 0.75rem 0.5rem;
+    display: flex;
+    justify-content: space-between; /* Judul kolom di kiri, nilai datanya di kanan */
+    align-items: center;
+    text-align: right;
+  }
+
+  /* 
+    td::before dan attr(data-label):
+    Menampilkan label kolom (misal: "NAMA", "ROLE") secara otomatis di sebelah kiri.
+    Nilai label ini diambil dari atribut HTML bernama 'data-label' pada tag td bersangkutan.
+    Contoh: <td data-label="Nama">Admin 1</td> akan menampilkan teks "Nama" di sisi kiri 
+    dan "Admin 1" di sisi kanan secara otomatis di HP!
+  */
+  td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    text-align: left;
+    margin-right: 1rem;
+  }
+
+  td:last-child {
+    border-bottom: none; /* Kolom terakhir di dalam kartu tidak memiliki garis pembatas putus-putus */
+  }
+
+  /* Tombol yang bersebelahan akan disusun vertikal dan melebar penuh di HP */
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Breakpoint 3: HP Layar Sangat Kecil (Maksimal Lebar 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px; /* Sedikit mengecilkan ukuran teks dasar */
+  }
+
+  .card {
+    padding: 1.5rem; /* Mengurangi padding dalam kartu agar menghemat ruang layar */
   }
 }

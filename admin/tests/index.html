@@ -20,32 +20,34 @@
   <main class="container">
     <section class="card">
       <h2>Daftar Tests</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Judul</th>
-            <th>Mentor</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>HTML Basic Test</td>
-            <td>Mentor 1</td>
-            <td>Published</td>
-          </tr>
-          <tr>
-            <td>CSS Basic Test</td>
-            <td>Mentor 2</td>
-            <td>Draft</td>
-          </tr>
-          <tr>
-            <td>Responsive Design Test</td>
-            <td>Mentor 1</td>
-            <td>Archived</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Judul</th>
+              <th>Mentor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Judul">HTML Basic Test</td>
+              <td data-label="Mentor">Mentor 1</td>
+              <td data-label="Status"><span class="badge badge-published">Published</span></td>
+            </tr>
+            <tr>
+              <td data-label="Judul">CSS Basic Test</td>
+              <td data-label="Mentor">Mentor 2</td>
+              <td data-label="Status"><span class="badge badge-draft">Draft</span></td>
+            </tr>
+            <tr>
+              <td data-label="Judul">Responsive Design Test</td>
+              <td data-label="Mentor">Mentor 1</td>
+              <td data-label="Status"><span class="badge badge-archived">Archived</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 
