@@ -12,22 +12,22 @@ Membangun dashboard utama untuk admin.
 
 ### Tasks
 
-* [ ] Tampilkan Total Users
-* [ ] Tampilkan Total Tests
-* [ ] Tampilkan Total Questions
+* [x] Tampilkan Total Users
+* [x] Tampilkan Total Tests
+* [x] Tampilkan Total Questions
 
 ## Feature: Menu Navigasi
 
 ### Tasks
 
-* [ ] Tambahkan menu Users
-* [ ] Tambahkan menu Tests
-* [ ] Tambahkan menu Questions
+* [x] Tambahkan menu Users
+* [x] Tambahkan menu Tests
+* [x] Tambahkan menu Questions
 
 ## Feature: Layout & Styling
 
 ### Tasks
 
-* [ ] Buat card statistik
-* [ ] Styling dashboard admin
-* [ ] Tambahkan logout button
+* [x] Buat card statistik
+* [x] Styling dashboard admin
+* [x] Tambahkan logout button

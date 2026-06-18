@@ -19,10 +19,44 @@
   </header>
 
   <main class="container">
-    <section class="card">
-      <h2>Ringkasan Admin</h2>
-      <p>Halaman awal untuk mengelola pengguna, tes, dan soal.</p>
-    </section>
+    <h2 class="mb-1">Ringkasan Admin</h2>
+    <p class="mb-2">Selamat datang di halaman awal untuk mengelola pengguna, tes, dan bank soal.</p>
+
+    <!-- Grid Statistik Dinamis -->
+    <div class="card-grid">
+      <!-- Card Statistik Users -->
+      <div class="card">
+        <h2>Total Users</h2>
+        <p class="mt-1" style="font-size: 2.5rem; font-weight: 700; color: var(--primary);">3</p>
+        <p class="mt-1">Pengguna aktif terdaftar.</p>
+      </div>
+
+      <!-- Card Statistik Tests -->
+      <div class="card">
+        <h2>Total Tests</h2>
+        <p class="mt-1" style="font-size: 2.5rem; font-weight: 700; color: var(--success);">3</p>
+        <p class="mt-1">Tes ujian yang dibuat.</p>
+      </div>
+
+      <!-- Card Statistik Questions -->
+      <div class="card">
+        <h2>Total Questions</h2>
+        <p class="mt-1" style="font-size: 2.5rem; font-weight: 700; color: var(--danger);">2</p>
+        <p class="mt-1">Soal ujian tersedia.</p>
+      </div>
+    </div>
+
+    <!-- Quick Navigation Card -->
+    <div class="card mt-2">
+      <h2>Aksi Cepat</h2>
+      <p class="mb-1">Gunakan pintasan di bawah ini untuk mengelola data secara langsung:</p>
+      <div class="button-group">
+        <a class="btn btn-primary" href="users/index.html">Kelola Users</a>
+        <a class="btn btn-primary" href="tests/index.html">Kelola Tests</a>
+        <a class="btn btn-primary" href="tests/questions/index.html">Kelola Questions</a>
+        <a class="btn" href="../index.html" style="background: var(--border);">Logout</a>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
