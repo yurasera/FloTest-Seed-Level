@@ -11,29 +11,36 @@
     <div class="container header-inner">
       <h1>Edit User</h1>
       <nav aria-label="Admin users edit navigation">
-        <a href="index.html">Back</a>
+        <a href="../dashboard.html">Dashboard</a>
+        <a href="index.html">Users</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
+    <div class="button-group mb-2">
+      <a class="btn" href="../dashboard.html">Kembali ke Dashboard</a>
+      <a class="btn" href="index.html">Kembali ke Users</a>
+    </div>
+
     <section class="card">
       <h2>Ubah User</h2>
+      <p>Data user telah diisi sebagai contoh untuk proses edit.</p>
       <form>
         <div class="form-group">
-          <label for="name">Nama</label>
-          <input id="name" type="text" name="name" value="Mentor 1">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" value="Mentor 1" required>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input id="email" type="email" name="email" value="mentor1@flotest.local">
+          <input id="email" type="email" name="email" value="mentor1@flotest.local" required>
         </div>
         <div class="form-group">
           <label for="role">Role</label>
-          <select id="role" name="role">
-            <option>Admin</option>
-            <option selected>Mentor</option>
-            <option>Menti</option>
+          <select id="role" name="role" required>
+            <option value="admin">Admin</option>
+            <option value="mentor" selected>Mentor</option>
+            <option value="menti">Menti</option>
           </select>
         </div>
         <button class="btn btn-primary" type="submit">Update</button>

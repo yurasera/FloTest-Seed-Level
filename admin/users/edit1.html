@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FloTest - Create User</title>
+  <title>FloTest - Edit User</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1>Create User</h1>
-      <nav aria-label="Admin users create navigation">
+      <h1>Edit User</h1>
+      <nav aria-label="Admin users edit navigation">
         <a href="../dashboard.html">Dashboard</a>
         <a href="index.html">Users</a>
       </nav>
@@ -24,27 +24,26 @@
     </div>
 
     <section class="card">
-      <h2>Tambah User</h2>
-      <p>Isi data berikut untuk membuat akun baru.</p>
+      <h2>Ubah User</h2>
+      <p>Data user telah diisi sebagai contoh untuk proses edit.</p>
       <form>
         <div class="form-group">
           <label for="name">Name</label>
-          <input id="name" type="text" name="name" placeholder="Masukkan nama user" required>
+          <input id="name" type="text" name="name" value="Admin 1" required>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input id="email" type="email" name="email" placeholder="nama@flotest.local" required>
+          <input id="email" type="email" name="email" value="admin@flotest.local" required>
         </div>
         <div class="form-group">
           <label for="role">Role</label>
           <select id="role" name="role" required>
-            <option value="">Pilih role</option>
-            <option value="admin">Admin</option>
+            <option value="admin" selected>Admin</option>
             <option value="mentor">Mentor</option>
             <option value="menti">Menti</option>
           </select>
         </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-primary" type="submit">Update</button>
       </form>
     </section>
   </main>
