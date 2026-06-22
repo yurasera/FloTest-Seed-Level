@@ -34,7 +34,7 @@ Membangun fitur management user untuk admin (CRUD operations).
 ### Tasks
 
 * [ ] Buat halaman form edit user
-* [ ] Pre-populate data user yang diedit
+* [ ] Pre-populate (munculkan) sesuai data user yang diedit
 * [ ] Tambahkan input Name
 * [ ] Tambahkan input Email
 * [ ] Tambahkan select Role
