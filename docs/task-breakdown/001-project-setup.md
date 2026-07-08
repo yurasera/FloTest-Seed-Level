@@ -72,7 +72,5 @@ Membangun struktur folder dan file HTML awal berdasarkan architecture yang telah
 
 ### Tasks
 
-* [ ] Setiap file HTML menggunakan structure dasar (header, nav, main, footer)
 * [ ] Setiap file HTML link ke CSS eksternal
-* [ ] Meta tags (charset, viewport) pada setiap halaman
 * [ ] Title tag yang deskriptif

@@ -17,7 +17,7 @@ Membangun fitur management question untuk admin (CRUD operations).
 * [ ] Buat halaman daftar questions
 * [ ] Buat table dengan kolom Number, Question Text, Type, Actions
 * [ ] Tampilkan questions berdasarkan test yang dipilih
-* [ ] Tambahkan dummy data questions (10-15 per test)
+* [ ] Tambahkan dummy data questions (5-15 per test)
 * [ ] Tambahkan action buttons (Edit, Delete)
 
 ## Feature: Create Question
