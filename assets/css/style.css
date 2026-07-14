@@ -26,6 +26,29 @@ p {
 }
 
 /* =========================
+    Logo
+========================= */
+
+.logo-header {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+
+.logo {
+     background: #2563eb;
+     color: white;
+     width: 42px;
+     height: 42px;
+     border-radius: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-weight: bold;
+     font-size: 20px;
+}
+
+/* =========================
    Navigation
 ========================= */
 
@@ -71,6 +94,17 @@ button {
 
 button:hover {
     background: #1d4ed8;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 /* =========================

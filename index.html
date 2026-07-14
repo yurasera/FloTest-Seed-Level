@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FloTest - Login</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloTest - Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1>FloTest</h1>
-      <nav aria-label="Main navigation">
-        <a href="index.html" class="active">Login</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="card auth-card">
-      <h2>Login</h2>
-      <form>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" placeholder="nama@email.com">
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input id="password" type="password" name="password" placeholder="••••••••">
-        </div>
-        <div class="button-group">
-          <a class="btn btn-primary" href="admin/dashboard.html">Login sebagai Admin</a>
-          <a class="btn btn-primary" href="mentor/dashboard.html">Login sebagai Mentor</a>
-          <a class="btn btn-primary" href="menti/dashboard.html">Login sebagai Menti</a>
-        </div>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
     <div class="container">
-      <p>FloTest HTML & CSS MVP</p>
+
+        <div class="logo-header">
+            <div class="logo">
+                F
+            </div>
+            <h1>FloTest</h1>
+        </div>
+
+        <div class="card">
+
+            <h2>Login</h2>
+
+            <form>
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="nama@email.com"
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="••••••••"
+                >
+
+                <br><br>
+
+                <a class="btn" href="admin/dashboard.html">
+                    Login sebagai Admin
+                </a>
+
+                <a class="btn" href="mentor/dashboard.html">
+                    Login sebagai Mentor
+                </a>
+
+                <a class="btn" href="menti/dashboard.html">
+                    Login sebagai Menti
+                </a>
+
+            </form>
+
+        </div>
+
+        <p>Bootcamp Seed Level - Frontend</p>
+
     </div>
-  </footer>
+
 </body>
+
 </html>
