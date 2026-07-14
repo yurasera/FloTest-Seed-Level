@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FloTest - Admin Users</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
+
 <body>
-  <header class="site-header">
+  <div class="site-header">
     <div class="container header-inner">
-      <h1>Users</h1>
-      <nav aria-label="Admin users navigation">
-        <a href="../dashboard.html">Dashboard</a>
-        <a href="create.html">Create</a>
-      </nav>
+      <h1>Dashboard Admin</h1>
+      <div class="navigation">
+        <a class="btn-nav" href="../dashboard.html">Dashboard</a>
+        <a class="btn-nav btn-nav-active" href="index.html">Users</a>
+        <a class="btn-nav" href="../tests/index.html">Tests</a>
+        <a class="btn-nav" href="../../index.html">Logout</a>
+      </div>
+
     </div>
-  </header>
+  </div>
 
   <main class="container">
     <section class="card">
-      <h2>Daftar Users</h2>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>Daftar Users</h2>
+        <a href="create.html" class="btn">Tambah User</a>
+      </div>
       <div class="table-wrapper">
         <table>
           <thead>
@@ -27,6 +35,7 @@
               <th>Nama</th>
               <th>Email</th>
               <th>Role</th>
+              <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
@@ -34,16 +43,73 @@
               <td data-label="Nama">Admin 1</td>
               <td data-label="Email">admin@flotest.local</td>
               <td data-label="Role"><span class="badge badge-admin">Admin</span></td>
+              <td>
+                <a href="edit.html" class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Edit</a>
+                <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #ef4444;">Delete</a>
+              </td>
             </tr>
             <tr>
               <td data-label="Nama">Mentor 1</td>
               <td data-label="Email">mentor1@flotest.local</td>
               <td data-label="Role"><span class="badge badge-mentor">Mentor</span></td>
+              <td>
+                <a href="edit.html" class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Edit</a>
+                <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #ef4444;">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Nama">Mentor 2</td>
+              <td data-label="Email">mentor2@flotest.local</td>
+              <td data-label="Role"><span class="badge badge-mentor">Mentor</span></td>
+              <td>
+                <a href="edit.html" class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Edit</a>
+                <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #ef4444;">Delete</a>
+              </td>
             </tr>
             <tr>
               <td data-label="Nama">Menti 1</td>
               <td data-label="Email">menti1@flotest.local</td>
               <td data-label="Role"><span class="badge badge-menti">Menti</span></td>
+              <td>
+                <a href="edit.html" class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Edit</a>
+                <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #ef4444;">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Nama">Menti 2</td>
+              <td data-label="Email">menti2@flotest.local</td>
+              <td data-label="Role"><span class="badge badge-menti">Menti</span></td>
+              <td>
+                <a href="edit.html" class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Edit</a>
+                <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #ef4444;">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Nama">Menti 3</td>
+              <td data-label="Email">menti3@flotest.local</td>
+              <td data-label="Role"><span class="badge badge-menti">Menti</span></td>
+              <td>
+                <a href="edit.html" class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Edit</a>
+                <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #ef4444;">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Nama">Menti 4</td>
+              <td data-label="Email">menti4@flotest.local</td>
+              <td data-label="Role"><span class="badge badge-menti">Menti</span></td>
+              <td>
+                <a href="edit.html" class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Edit</a>
+                <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #ef4444;">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Nama">Menti 5</td>
+              <td data-label="Email">menti5@flotest.local</td>
+              <td data-label="Role"><span class="badge badge-menti">Menti</span></td>
+              <td>
+                <a href="edit.html" class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Edit</a>
+                <a href="#" class="btn" style="padding: 5px 10px; font-size: 0.8rem; background: #ef4444;">Delete</a>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -53,8 +119,9 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>FloTest HTML & CSS MVP</p>
+      <p>Bootcamp Seed Level - Frontend</p>
     </div>
   </footer>
 </body>
+
 </html>

@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FloTest - Dashboard Admin</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloTest - Dashboard Admin</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1>Dashboard Admin</h1>
-      <nav aria-label="Admin navigation">
-        <a href="users/index.html">Users</a>
-        <a href="tests/index.html">Tests</a>
-        <a href="../index.html">Logout</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <h2 class="mb-1">Ringkasan Admin</h2>
-    <p class="mb-2">Selamat datang di halaman awal untuk mengelola pengguna, tes, dan bank soal.</p>
+    <div class="site-header">
+        <div class="container header-inner">
+            <h1>Dashboard Admin</h1>
+            <div class="navigation">
+                <a class="btn-nav btn-nav-active" href="dashboard.html">Dashboard</a>
+                <a class="btn-nav" href="users/index.html">Users</a>
+                <a class="btn-nav" href="tests/index.html">Tests</a>
+                <a class="btn-nav" href="../index.html">Logout</a>
+            </div>
 
-    <!-- Grid Statistik Dinamis -->
-    <div class="card-grid">
-      <!-- Card Statistik Users -->
-      <div class="card">
-        <h2>Total Users</h2>
-        <p class="mt-1 stat-value primary">3</p>
-        <p class="mt-1">Pengguna aktif terdaftar.</p>
-      </div>
-
-      <!-- Card Statistik Tests -->
-      <div class="card">
-        <h2>Total Tests</h2>
-        <p class="mt-1 stat-value success">3</p>
-        <p class="mt-1">Tes ujian yang dibuat.</p>
-      </div>
-
-      <!-- Card Statistik Questions -->
-      <div class="card">
-        <h2>Total Questions</h2>
-        <p class="mt-1 stat-value danger">2</p>
-        <p class="mt-1">Soal ujian tersedia.</p>
-      </div>
+        </div>
     </div>
 
-    <!-- Quick Navigation Card -->
-    <div class="card mt-2">
-      <h2>Aksi Cepat</h2>
-      <p class="mb-1">Gunakan pintasan di bawah ini untuk mengelola data secara langsung:</p>
-      <div class="button-group">
-        <a class="btn btn-primary" href="users/index.html">Kelola Users</a>
-        <a class="btn btn-primary" href="tests/index.html">Kelola Tests</a>
-        <a class="btn btn-primary" href="tests/questions/index.html">Kelola Questions</a>
-        <a class="btn" href="../index.html">Logout</a>
-      </div>
-    </div>
-  </main>
-
-  <footer class="site-footer">
     <div class="container">
-      <p>Bootcamp Seed Level - Frontend</p>
+
+        <h2 class="mb-1">Ringkasan Admin</h2>
+
+        <p class="mb-2">
+            Selamat datang di halaman awal untuk mengelola pengguna,
+            tes, dan bank soal.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h2>Total Users</h2>
+                <p class="mt-1 stat-value primary">3</p>
+                <p class="mt-1">Pengguna aktif terdaftar.</p>
+            </div>
+
+            <div class="card">
+                <h2>Total Tests</h2>
+                <p class="mt-1 stat-value success">3</p>
+                <p class="mt-1">Tes ujian yang dibuat.</p>
+            </div>
+
+            <div class="card">
+                <h2>Total Questions</h2>
+                <p class="mt-1 stat-value danger">2</p>
+                <p class="mt-1">Soal ujian tersedia.</p>
+            </div>
+
+        </div>
+
+        <div class="card mt-2">
+
+            <h2>Aksi Cepat</h2>
+
+            <p class="mb-1">
+                Gunakan pintasan di bawah ini untuk mengelola data secara langsung.
+            </p>
+
+            <div class="button-group">
+                <a class="btn btn-primary" href="users/index.html">Kelola Users</a>
+                <a class="btn btn-primary" href="tests/index.html">Kelola Tests</a>
+                <a class="btn btn-primary" href="tests/questions/index.html">Kelola Questions</a>
+                <a class="btn" href="../index.html">Logout</a>
+            </div>
+
+        </div>
+
     </div>
-  </footer>
+
+    <div class="site-footer">
+        <div class="container">
+            <p>Bootcamp Seed Level - Frontend</p>
+        </div>
+    </div>
+
 </body>
+
 </html>
