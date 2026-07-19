@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FloTest - Login</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body>
@@ -20,66 +20,136 @@
                     F
                 </div>
 
-                <div class="brand">
-                    <h1>FloTest</h1>
-
-                    <p class="subtitle">
-                        Yura
-                    </p>
-                </div>
-
             </div>
 
-            <h2>Login</h2>
+            <div class="login-header">
+
+                <h2>
+                    Welcome Back to Flotest
+                </h2>
+
+                <p>
+                    Sign in to access your dashboard and continue your learning journey.
+                </p>
+
+            </div>
 
             <form>
 
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="nama@email.com"
-                    >
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email"
+                        required autofocus>
+
                 </div>
 
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        name="password" 
-                        placeholder="••••••••"
-                    >
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-field">
+
+                        <input type="password" id="password" name="password" placeholder="Enter your password"
+                            autocomplete="current-password" required>
+
+                        <button type="button" class="password-toggle" onclick="togglePassword()"
+                            aria-label="Toggle password visibility">
+
+                            <svg id="eye-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+
+                            <svg id="eye-closed" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                                <path
+                                    d="M17.94 17.94A10.94 10.94 0 0 1 12 19C5 19 1 12 1 12a21.77 21.77 0 0 1 5.06-5.94" />
+                                <path d="M9.9 4.24A10.94 10.94 0 0 1 12 5c7 0 11 7 11 7a21.8 21.8 0 0 1-4.35 5.14" />
+                                <path d="M1 1l22 22" />
+                            </svg>
+
+                        </button>
+
+                    </div>
+
                 </div>
 
                 <div class="form-actions-vertical">
 
                     <a class="btn btn-primary" href="admin/dashboard.html">
-                        Login sebagai Admin
-                    </a>
-
-                    <a class="btn btn-secondary" href="mentor/dashboard.html">
-                        Login sebagai Mentor
-                    </a>
-
-                    <a class="btn btn-secondary" href="menti/dashboard.html">
-                        Login sebagai Menti
+                        Sign In
                     </a>
 
                 </div>
 
             </form>
 
+            <div class="divider"></div>
+
+            <div class="demo-account">
+
+                <span class="demo-label">
+                    Demo Accounts
+                </span>
+
+                <div class="demo-links">
+
+                    <a href="admin/dashboard.html">
+                        Admin
+                    </a>
+
+                    <a href="mentor/dashboard.html">
+                        Mentor
+                    </a>
+
+                    <a href="menti/dashboard.html">
+                        Menti
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
         <div class="site-footer">
-            <p>Bootcamp Seed Level - Frontend</p>
+
+            <p>
+                Bootcamp Seed Level • Frontend
+            </p>
+
         </div>
 
     </div>
 
+    <script>
+        function togglePassword() {
+
+            const password = document.getElementById("password");
+            const eyeOpen = document.getElementById("eye-open");
+            const eyeClosed = document.getElementById("eye-closed");
+
+            if (password.type === "password") {
+                password.type = "text";
+                eyeOpen.style.display = "none";
+                eyeClosed.style.display = "block";
+            } else {
+                password.type = "password";
+                eyeOpen.style.display = "block";
+                eyeClosed.style.display = "none";
+            }
+
+        }
+    </script>
 </body>
 
 </html>

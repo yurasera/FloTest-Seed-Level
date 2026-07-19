@@ -1,0 +1,332 @@
+/* =========================
+   Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Body
+========================= */
+
+body {
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: #f5f5f7;
+    color: #1d1d1f;
+}
+
+/* =========================
+   Login Layout
+========================= */
+
+.login-container {
+    width: 420px;
+    margin: 40px auto;
+}
+
+.login-card {
+    background: #ffffff;
+
+    padding: 40px;
+
+    border: 1px solid #e5e5e7;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, .05);
+}
+
+/* =========================
+   Brand
+========================= */
+
+.logo-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1d1d1f;
+    color: #ffffff;
+
+    border-radius: 20px;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.brand h1 {
+
+    margin: 0;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: #1d1d1f;
+}
+
+.subtitle {
+
+    margin-top: 6px;
+
+    color: #6e6e73;
+
+    font-size: .95rem;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   Login Header
+========================= */
+
+.login-header {
+
+    margin-bottom: 32px;
+}
+
+.login-header h2 {
+
+    font-size: 1.6rem;
+
+    font-weight: 600;
+
+    color: #1d1d1f;
+
+    margin-bottom: 10px;
+}
+
+.login-header p {
+
+    color: #6e6e73;
+
+    font-size: .95rem;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   Form
+========================= */
+
+.form-group {
+
+    margin-bottom: 22px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+}
+
+.form-group input {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d2d2d7;
+
+    border-radius: 12px;
+
+    font-size: .95rem;
+
+    transition: .2s;
+}
+
+.form-group input:focus {
+
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, .12);
+}
+
+/* =========================
+   Button
+========================= */
+
+.form-actions-vertical {
+
+    margin-top: 30px;
+}
+.btn {
+    display: block;
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn-primary {
+    background: #0a84ff;
+    color: white;
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 6px 20px rgba(10,132,255,.18);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px rgba(10,132,255,.25);
+}
+
+/* =========================
+   Divider
+========================= */
+
+.divider {
+
+    height: 1px;
+
+    background: #e5e5e7;
+
+    margin: 32px 0;
+}
+
+/* =========================
+   Demo Account
+========================= */
+
+.demo-account {
+
+    text-align: center;
+}
+
+.demo-label {
+
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #6e6e73;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+}
+
+.demo-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 24px;
+}
+
+.demo-links a {
+
+    color: #1d1d1f;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+.demo-links a:hover {
+
+    color: #1d4ed8;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+.site-footer p {
+
+    color: #8e8e93;
+
+    font-size: .9rem;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 46px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #8e8e93;
+    cursor: pointer;
+}
+
+.password-toggle:hover {
+    color: #1d1d1f;
+}
+
+.password-toggle svg {
+    width: 20px;
+    height: 20px;
+}
