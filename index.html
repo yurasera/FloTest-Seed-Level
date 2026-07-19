@@ -13,10 +13,19 @@
     <div class="container">
 
         <div class="logo-header">
+
             <div class="logo">
                 F
             </div>
-            <h1>FloTest</h1>
+
+            <div class="brand">
+                <h1>FloTest</h1>
+
+                <p class="subtitle">
+                    Flow Through Every Assessment
+                </p>
+            </div>
+
         </div>
 
         <div class="card">
@@ -25,41 +34,37 @@
 
             <form>
 
-                <label for="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="nama@email.com"
-                >
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="nama@email.com">
+                </div>
 
-                <label for="password">Password</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="••••••••"
-                >
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••">
+                </div>
 
-                <br><br>
+                <div class="form-actions-vertical">
+                    <a class="btn btn-primary" href="admin/dashboard.html">
+                        Login sebagai Admin
+                    </a>
 
-                <a class="btn" href="admin/dashboard.html">
-                    Login sebagai Admin
-                </a>
+                    <a class="btn btn-secondary" href="mentor/dashboard.html">
+                        Login sebagai Mentor
+                    </a>
 
-                <a class="btn" href="mentor/dashboard.html">
-                    Login sebagai Mentor
-                </a>
-
-                <a class="btn" href="menti/dashboard.html">
-                    Login sebagai Menti
-                </a>
+                    <a class="btn btn-secondary" href="menti/dashboard.html">
+                        Login sebagai Menti
+                    </a>
+                </div>
 
             </form>
 
         </div>
 
-        <p>Bootcamp Seed Level - Frontend</p>
+        <div class="site-footer">
+            <p>Bootcamp Seed Level - Frontend</p>
+        </div>
 
     </div>
 
