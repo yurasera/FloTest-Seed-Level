@@ -9,19 +9,31 @@
 </head>
 
 <body>
-  <header class="site-header">
+
+  <div class="site-header">
     <div class="container header-inner">
       <h1>Tests</h1>
-      <nav aria-label="Admin tests navigation">
-        <a href="../dashboard.html">Dashboard</a>
-        <a href="create.html">Create</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>Daftar Tests</h2>
+      <div class="navigation">
+        <a class="btn-nav" href="../dashboard.html">Dashboard</a>
+        <a class="btn-nav" href="../users/index.html">Users</a>
+        <a class="btn-nav btn-nav-active" href="index.html">Tests</a>
+        <a class="btn-nav" href="../../index.html">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+
+      <div class="card-header">
+        <h2>Daftar Tests</h2>
+
+        <a class="btn btn-primary" href="create.html">
+          Tambah Test
+        </a>
+      </div>
+
       <div class="table-wrapper">
         <table>
           <thead>
@@ -29,35 +41,73 @@
               <th>Judul</th>
               <th>Mentor</th>
               <th>Status</th>
+              <th>Aksi</th>
             </tr>
           </thead>
+
           <tbody>
+
             <tr>
               <td data-label="Judul">HTML Basic Test</td>
               <td data-label="Mentor">Mentor 1</td>
-              <td data-label="Status"><span class="badge badge-published">Published</span></td>
+              <td data-label="Status">
+                <span class="badge badge-published">Published</span>
+              </td>
+              <td data-label="Aksi">
+                <div class="table-actions">
+                  <a class="btn btn-edit" href="edit.html">Edit</a>
+                  <button class="btn btn-delete" type="button">
+                    Hapus
+                  </button>
+                </div>
+              </td>
             </tr>
+
             <tr>
               <td data-label="Judul">CSS Basic Test</td>
               <td data-label="Mentor">Mentor 2</td>
-              <td data-label="Status"><span class="badge badge-draft">Draft</span></td>
+              <td data-label="Status">
+                <span class="badge badge-draft">Draft</span>
+              </td>
+              <td data-label="Aksi">
+                <div class="table-actions">
+                  <a class="btn btn-edit" href="edit.html">Edit</a>
+                  <button class="btn btn-delete" type="button">
+                    Hapus
+                  </button>
+                </div>
+              </td>
             </tr>
+
             <tr>
               <td data-label="Judul">Responsive Design Test</td>
               <td data-label="Mentor">Mentor 1</td>
-              <td data-label="Status"><span class="badge badge-archived">Archived</span></td>
+              <td data-label="Status">
+                <span class="badge badge-archived">Archived</span>
+              </td>
+              <td data-label="Aksi">
+                <div class="table-actions">
+                  <a class="btn btn-edit" href="edit.html">Edit</a>
+                  <button class="btn btn-delete" type="button">
+                    Hapus
+                  </button>
+                </div>
+              </td>
             </tr>
+
           </tbody>
         </table>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
+    </div>
+  </div>
+
+  <div class="site-footer">
     <div class="container">
       <p>Bootcamp Seed Level - Frontend</p>
     </div>
-  </footer>
+  </div>
+
 </body>
 
 </html>

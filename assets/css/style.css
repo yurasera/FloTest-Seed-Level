@@ -96,6 +96,12 @@ nav a:hover {
     margin-top: 0;
 }
 
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .stat-value {
     font-size: 2.5rem;
     font-weight: 700;
@@ -184,6 +190,17 @@ textarea {
     justify-content: space-between;
     align-items: center;
     margin-top: 24px;
+}
+
+.btn-edit {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+.btn-delete {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    background: #ef4444;
 }
 
 /* =========================
