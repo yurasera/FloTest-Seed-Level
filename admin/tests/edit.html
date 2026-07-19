@@ -9,27 +9,35 @@
 </head>
 
 <body>
-  <header class="site-header">
+
+  <div class="site-header">
     <div class="container header-inner">
       <h1>Edit Test</h1>
-      <nav aria-label="Admin tests edit navigation">
-        <a href="index.html">Back</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>Ubah Test</h2>
+      <div class="navigation">
+        <a class="btn-nav" href="../dashboard.html">Dashboard</a>
+        <a class="btn-nav" href="../users/index.html">Users</a>
+        <a class="btn-nav btn-nav-active" href="index.html">Tests</a>
+        <a class="btn-nav" href="../../index.html">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Edit Test</h2>
+
       <form>
         <div class="form-group">
           <label for="title">Judul</label>
           <input id="title" type="text" name="title" value="HTML Basic Test">
         </div>
+
         <div class="form-group">
           <label for="description">Deskripsi</label>
           <textarea id="description" name="description" rows="5">Tes dasar HTML.</textarea>
         </div>
+
         <div class="form-group">
           <label for="status">Status</label>
           <select id="status" name="status">
@@ -38,16 +46,24 @@
             <option>Archived</option>
           </select>
         </div>
-        <button class="btn btn-primary" type="submit">Update</button>
-      </form>
-    </section>
-  </main>
 
-  <footer class="site-footer">
+        <div class="form-actions">
+          <a class="btn btn-secondary" href="index.html">Kembali</a>
+
+          <button class="btn btn-primary" type="submit">
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="site-footer">
     <div class="container">
       <p>Bootcamp Seed Level - Frontend</p>
     </div>
-  </footer>
+  </div>
+
 </body>
 
 </html>
