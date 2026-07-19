@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FloTest - Take Test</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/test.css">
 </head>
 
 <body>
@@ -27,32 +27,111 @@
 
   <main class="container">
     <section class="card">
+
       <h2>Kerjakan Tes</h2>
-      <p>Nama Tes: HTML Basic Test</p>
-      <p>Nomor Soal: 1 / 10</p>
-      <section class="card inner-card">
+
+      <p>
+        Nama Tes: HTML Basic Test
+      </p>
+
+      <p>
+        Nomor Soal: 1 / 10
+      </p>
+
+
+      <div class="progress-wrapper">
+
+        <div class="progress-info">
+          <span>Progress</span>
+          <span>10%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-value"></div>
+        </div>
+
+      </div>
+
+
+      <div class="card inner-card">
+
         <h3>Pertanyaan</h3>
-        <p>Apa kepanjangan dari HTML?</p>
-        <form>
-          <div class="form-group">
-            <label><input type="radio" name="answer"> A. HyperText Markup Language</label>
+
+        <p>
+          Apa kepanjangan dari HTML?
+        </p>
+
+
+        <form action="result.html" method="GET">
+
+          <div class="form-group answer-option">
+
+            <label>
+              <input type="radio" name="answer" value="A" onchange="this.form.submit()">
+
+              A. HyperText Markup Language
+
+            </label>
+
           </div>
-          <div class="form-group">
-            <label><input type="radio" name="answer"> B. High Tech Modern Language</label>
+
+
+          <div class="form-group answer-option">
+
+            <label>
+              <input type="radio" name="answer" value="B" onchange="this.form.submit()">
+
+              B. High Tech Modern Language
+
+            </label>
+
           </div>
-          <div class="form-group">
-            <label><input type="radio" name="answer"> C. Home Tool Markup Language</label>
+
+
+          <div class="form-group answer-option">
+
+            <label>
+              <input type="radio" name="answer" value="C" onchange="this.form.submit()">
+
+              C. Home Tool Markup Language
+
+            </label>
+
           </div>
-          <div class="form-group">
-            <label><input type="radio" name="answer"> D. Hyper Text Machine Language</label>
+
+
+          <div class="form-group answer-option">
+
+            <label>
+              <input type="radio" name="answer" value="D" onchange="this.form.submit()">
+
+              D. Hyper Text Machine Language
+
+            </label>
+
           </div>
-          <div class="button-group">
-            <button class="btn" type="button">Sebelumnya</button>
-            <button class="btn" type="button">Selanjutnya</button>
-            <button class="btn btn-primary" type="submit">Submit</button>
-          </div>
+
+
         </form>
-      </section>
+
+
+        <div class="button-group">
+
+          <button class="btn" type="button">
+            Sebelumnya
+          </button>
+
+
+          <button class="btn btn-primary" type="button">
+            Selanjutnya
+          </button>
+
+        </div>
+
+
+      </div>
+
+
     </section>
   </main>
 
