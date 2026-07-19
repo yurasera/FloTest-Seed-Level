@@ -1,7 +1,9 @@
 :root {
 
-    --primary: #0071e3;
-    --primary-hover: #0062c4;
+    --primary: #673499;
+    --primary-hover: #533fdb;
+
+    --secondary: #3c246b;
 
     --text-primary: #1d1d1f;
     --text-secondary: #6e6e73;
@@ -10,8 +12,8 @@
 
     --surface: #ffffff;
 
-    --success: #34c759;
-    --danger: #ff3b30;
+    --success: #10b981;
+    --danger: #e63956;
 
     --radius-md: 14px;
     --radius-lg: 24px;
@@ -33,7 +35,7 @@ body {
 
     max-width: 1200px;
 
-    margin: 0 auto;
+    margin: 15px auto;
 
     padding-left: 24px;
 
