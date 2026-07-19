@@ -347,29 +347,75 @@ textarea {
    Table
 ========================= */
 
+.table-wrapper {
+    margin-top: 20px;
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-radius: 16px;
+
+}
+
 table {
+
     width: 100%;
     border-collapse: collapse;
+
+    background: white;
+
 }
 
-table,
-th,
-td {
-    border: 1px solid #ccc;
-}
 
 th {
+
     background: var(--primary);
+
     color: white;
+
+    font-weight: 600;
+
 }
+
 
 th,
 td {
-    padding: 10px;
+
+    padding: 14px 16px;
+
     text-align: left;
+
+    border-bottom: 1px solid #e5e5e7;
+
 }
 
 
+td {
+
+    color: #6e6e73;
+
+}
+
+
+tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+
+tbody tr {
+
+    transition: .2s;
+
+}
+
+
+tbody tr:hover {
+
+    background: #f5f5f7;
+
+}
 
 .login-container {
     width: 380px;
