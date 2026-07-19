@@ -214,6 +214,20 @@ textarea {
     margin-top: 24px;
 }
 
+.form-actions-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 24px;
+}
+
+.form-actions-vertical .btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+}
+
 .btn-detail {
     padding: 5px 10px;
     font-size: 0.8rem;
@@ -255,4 +269,15 @@ th,
 td {
     padding: 10px;
     text-align: left;
+}
+
+
+
+.login-container {
+    width: 380px;
+    margin: 60px auto;
+}
+
+.login-card {
+    padding: 30px;
 }
