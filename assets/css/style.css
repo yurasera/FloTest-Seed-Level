@@ -192,6 +192,12 @@ textarea {
     margin-top: 24px;
 }
 
+.btn-detail {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    background: #198754;
+}
+
 .btn-edit {
     padding: 5px 10px;
     font-size: 0.8rem;

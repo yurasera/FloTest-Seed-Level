@@ -9,20 +9,31 @@
 </head>
 
 <body>
-  <header class="site-header">
+
+  <div class="site-header">
     <div class="container header-inner">
       <h1>Questions</h1>
-      <nav aria-label="Admin questions navigation">
-        <a href="../../dashboard.html">Dashboard</a>
-        <a href="../index.html">Tests</a>
-        <a href="create.html">Create</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>Daftar Questions</h2>
+      <div class="navigation">
+        <a class="btn-nav" href="../../dashboard.html">Dashboard</a>
+        <a class="btn-nav" href="../../users/index.html">Users</a>
+        <a class="btn-nav btn-nav-active" href="../index.html">Tests</a>
+        <a class="btn-nav" href="../../../index.html">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+
+      <div class="card-header">
+        <h2>Daftar Questions</h2>
+
+        <a class="btn btn-primary" href="create.html">
+          Tambah Question
+        </a>
+      </div>
+
       <div class="table-wrapper">
         <table>
           <thead>
@@ -30,30 +41,53 @@
               <th>No</th>
               <th>Pertanyaan</th>
               <th>Tipe</th>
+              <th>Aksi</th>
             </tr>
           </thead>
+
           <tbody>
+
             <tr>
               <td data-label="No">1</td>
               <td data-label="Pertanyaan">Apa kepanjangan HTML?</td>
               <td data-label="Tipe">Multiple Choice</td>
+              <td data-label="Aksi">
+                <div class="table-actions">
+                  <a class="btn btn-edit" href="edit.html">Edit</a>
+                  <button class="btn btn-delete" type="button">
+                    Hapus
+                  </button>
+                </div>
+              </td>
             </tr>
+
             <tr>
               <td data-label="No">2</td>
               <td data-label="Pertanyaan">Tag untuk paragraf adalah?</td>
               <td data-label="Tipe">Multiple Choice</td>
+              <td data-label="Aksi">
+                <div class="table-actions">
+                  <a class="btn btn-edit" href="edit.html">Edit</a>
+                  <button class="btn btn-delete" type="button">
+                    Hapus
+                  </button>
+                </div>
+              </td>
             </tr>
+
           </tbody>
         </table>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
+    </div>
+  </div>
+
+  <div class="site-footer">
     <div class="container">
       <p>Bootcamp Seed Level - Frontend</p>
     </div>
-  </footer>
+  </div>
+
 </body>
 
 </html>
