@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloTest - Mentor Tests</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="site-header">
+        <div class="container header-inner">
+            <h1>Tests</h1>
+
+            <div class="navigation">
+                <a class="btn-nav" href="../dashboard.html">Dashboard</a>
+                <a class="btn-nav btn-nav-active" href="index.html">Tests</a>
+                <a class="btn-nav" href="../../index.html">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+
+            <div class="card-header">
+                <h2>Daftar Tests</h2>
+
+                <a class="btn btn-primary" href="create.html">
+                    Tambah Test
+                </a>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Judul</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td data-label="Judul">HTML Basic Test</td>
+                            <td data-label="Status">
+                                <span class="badge badge-published">Published</span>
+                            </td>
+                            <td data-label="Aksi">
+                                <div class="table-actions">
+                                    <a class="btn btn-detail" href="questions/index.html">Lihat Soal</a>
+                                    <a class="btn btn-edit" href="edit.html">Edit</a>
+                                    <button class="btn btn-delete" type="button">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td data-label="Judul">CSS Basic Test</td>
+                            <td data-label="Status">
+                                <span class="badge badge-draft">Draft</span>
+                            </td>
+                            <td data-label="Aksi">
+                                <div class="table-actions">
+                                    <a class="btn btn-detail" href="questions/index.html">Lihat Soal</a>
+                                    <a class="btn btn-edit" href="edit.html">Edit</a>
+                                    <button class="btn btn-delete" type="button">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="site-footer">
+        <div class="container">
+            <p>Bootcamp Seed Level - Frontend</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

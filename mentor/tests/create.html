@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloTest - Create Test</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="site-header">
+        <div class="container header-inner">
+            <h1>Create Test</h1>
+
+            <div class="navigation">
+                <a class="btn-nav" href="../dashboard.html">Dashboard</a>
+                <a class="btn-nav btn-nav-active" href="index.html">Tests</a>
+                <a class="btn-nav" href="../../index.html">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Tambah Test</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="title">Judul</label>
+                    <input id="title" type="text" name="title">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Deskripsi</label>
+                    <textarea id="description" name="description" rows="5"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option>Draft</option>
+                        <option>Published</option>
+                        <option>Archived</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <a class="btn btn-secondary" href="index.html">Kembali</a>
+                    <button class="btn btn-primary" type="submit">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="site-footer">
+        <div class="container">
+            <p>Bootcamp Seed Level - Frontend</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
